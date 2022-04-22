@@ -4,12 +4,12 @@ variable "aws_region"{
   description = "Region for AWS Resources"
   default = "ap-east1"
 }
-/*variable "access_key"{
+variable "access_key"{
  value = ""
 }
 variable "secret_key" {
  value = ""
-}*/
+}
 
 # virtual network
 variable "instance_type" {
