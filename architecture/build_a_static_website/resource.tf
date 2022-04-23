@@ -15,4 +15,4 @@ resource "aws_s3_bucket_website_configuration" ""{
   }
 }
 
-resource "aws_s3_bucket_object"
+resource "aws_s3_bucket_object" ""{}
