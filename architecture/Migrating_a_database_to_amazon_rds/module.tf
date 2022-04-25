@@ -12,7 +12,7 @@ module "rds" {
   username = ""
   port = "3306"
   identifier = "database-1"
-
+  
   create_db_instance = true
   create_db_subnet_group = true
 }

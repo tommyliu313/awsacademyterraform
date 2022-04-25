@@ -5,10 +5,10 @@ variable "aws_region"{
   default = "ap-east1"
 }
 variable "access_key"{
- description = "access key"
+ value = ""
 }
 variable "secret_key" {
- description = "secret key"
+ value = ""
 }
 
 # virtual network
@@ -24,10 +24,10 @@ type = list(string)
 default = ["10.0.2.0/24","10.0.4.0/24"]
 }
 
-variable "public_subnets"{
+variable "public_subnet"{
 name = "public_subnet"
 type = list(string)
-default = ["10.0.0.0/24","10.0.1.0/24"]
+default = "10.0.0.0/24"
 }
 variable "cidr_block"{
  default = "10.0.0.0/16"
