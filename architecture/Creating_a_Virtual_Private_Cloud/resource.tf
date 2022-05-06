@@ -26,6 +26,7 @@ resource "aws_security_group""App-SG"{
 }
 resource "aws_vpc" "LabVPC"{
   cidr_block = "10.0.0.0/16"
+  ipv6_cidr_block = None
   tags = {
     Name = "LabVPC"
   }
@@ -35,4 +36,14 @@ resource "aws_vpc" "SharedVPC"{
   tags = {
     Name = "LabVPC"
   }
+}
+
+resource "aws_subnet" "Public_Subnet"{
+  vpc_id = aws_vpc.LabVPC.id
+  availability_zone = "${var.aws_region}"
+}
+
+resource "aws_subnet" "Private_Subnet" {
+  vpc_id = aws_vpc.LabVPC.id
+  cidr_block = "10.0.2.0/23"
 }
